@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Results</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #e9ecef;
+      color: #333;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .score-container {
+      max-width: 600px;
+      width: 100%;
+      margin: auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .score-container h1 {
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .score-container p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .btn-primary {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="score-container">
+    <h1>Your Quiz Score</h1>
+    <p id="display-score">Calculating...</p>
+    <a href="Home.html" class="btn btn-primary">Return to Home</a>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const score = localStorage.getItem('score');
+      const totalQuestions = localStorage.getItem('totalQuestions');
+      document.getElementById('display-score').textContent = `You scored ${score} out of ${totalQuestions}`;
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quiz - Quiz100</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/takequiz_style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Quiz100</h1>
+        <ul class="nav-links">
+            <li><a href="CreateQuiz.html">Create Quiz</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+    <div class="applications-box">
+        <h2>Create Your Quiz</h2>
+        <form>
+            <div class="form-group">
+                <label for="quiz-name">Quiz Name:</label>
+                <input type="text" id="quiz-name" class="form-control">
+            </div>
+            <div id="questions-container"></div>
+            <button class="btn btn-primary" type="button" id="add-question">Add Question</button>
+            <button class="btn btn-primary" type="submit" id="submit-quiz">Submit Quiz</button>
+        </form>
+    </div>
+
+    <!-- <script src="assets/bootstrap/js/bootstrap.min.js"></script> -->
+    <script src="assets/JavaScript/CreateQuiz.js"></script>
+</body>
+
+</html>
